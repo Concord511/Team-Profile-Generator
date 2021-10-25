@@ -8,8 +8,8 @@ inquirer
             name: "name",
             message: "What is the team manager's name?",
             validate: input => {
-                if (!input) {
-                    return "Please enter a valid name."
+                if (input === '') {
+                    return "Please enter a name."
                 }
                 else {
                     return true;
@@ -34,8 +34,8 @@ inquirer
             name: "email",
             message: "What is the team manager's email address?",
             validate: input => {
-                if (!input) {
-                    return "Please enter a valid email address."
+                if (input === '') {
+                    return "Please enter an email address."
                 }
                 else {
                     return true;

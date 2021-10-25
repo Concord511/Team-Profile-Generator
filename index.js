@@ -6,12 +6,54 @@ inquirer
         {
             type: "input",
             name: "name",
-            message: "What's your name?"
+            message: "What is the team manager's name?",
+            validate: input => {
+                if (!input) {
+                    return "Please enter a valid name."
+                }
+                else {
+                    return true;
+                }
+            }
         },
         {
-            type: "number",
-            name: "age",
-            message: "How old are you?"
+            type: "input",
+            name: "id",
+            message: "What is the team manager's employee ID?",
+            validate: input => {
+                if (isNaN(input) || input < 0) {
+                    return "Please enter a valid employee ID."
+                }
+                else {
+                    return true;
+                }
+            }
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is the team manager's email address?",
+            validate: input => {
+                if (!input) {
+                    return "Please enter a valid email address."
+                }
+                else {
+                    return true;
+                }
+            }
+        },
+        {
+            type: "input",
+            name: "officeNumber",
+            message: "What is the team manager's office number?",
+            validate: input => {
+                if (isNaN(input) || input < 0) {
+                    return "Please enter a valid office number."
+                }
+                else {
+                    return true;
+                }
+            }
         }
     ])
     .then((answer) => {

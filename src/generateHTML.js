@@ -10,7 +10,7 @@ function generateHTML(employees) {
             roleFeature = "Office Number: " + member.officeNumber;
         }
         else if (role === 'Engineer') {
-            roleFeature = "GitHub Username: " + member.github;
+            roleFeature = 'GitHub Username: <a href="https://www.github.com/' + member.github + '" target="blank">' + member.github + '</a>';
         }
         else if (role === 'Intern') {
             roleFeature = "School: " + member.school;
@@ -22,7 +22,7 @@ function generateHTML(employees) {
             </div>
             <div class="member-fields">
                 <span class="member-field">Employee ID: ${id}</span>
-                <span class="member-field">Email: ${email}</span>
+                <span class="member-field">Email: <a href="mailto:${email}">${email}</a></span>
                 <span class="member-field">${roleFeature}</span>
             </div>
         </div>
@@ -38,7 +38,7 @@ function generateHTML(employees) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <title>Team Profile</title>
 </head>
 <body>

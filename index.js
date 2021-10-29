@@ -1,5 +1,10 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const generateHTML = require('./src/generateHTML');
+
 let employeePod = [];
 
 function promptManager() {
@@ -218,3 +223,17 @@ function promptIntern() {
             promptAddEmployee();
         });
 }
+
+function buildTeamHTML(employeePod) {
+    writeData = generateHTML(employeePod)
+    fs.writeFile('./dist/index.HTML', writeData, err => {
+        if (err) {
+            throw err;
+        }
+        else {
+            console.log('File written successfull.');
+        }
+    });
+}
+
+promptManager();

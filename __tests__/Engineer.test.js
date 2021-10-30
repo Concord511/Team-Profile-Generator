@@ -2,7 +2,7 @@ const Engineer = require('../lib/Engineer');
 
 test('creates an engineer object', () => {
     // create a new Engineer object
-    const engineer = new Engineer('Ian', 1, 'concord511@gmail.com');
+    const engineer = new Engineer('Ian', 1, 'concord511@gmail.com', 'concord511');
 
     // create variables to hold values returned by Engineer object's functions
     const engName = engineer.getName();

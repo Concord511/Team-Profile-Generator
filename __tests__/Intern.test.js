@@ -2,7 +2,7 @@ const Intern = require('../lib/Intern');
 
 test('creates an intern object', () => {
     // create a new Intern object
-    const intern = new Intern('Ian', 1, 'concord511@gmail.com');
+    const intern = new Intern('Ian', 1, 'concord511@gmail.com', 'Michigan Technological University');
 
     // create variables to hold values returned by Intern object's functions
     const intName = intern.getName();
